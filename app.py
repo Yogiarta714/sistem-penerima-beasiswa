@@ -397,7 +397,7 @@ def halaman_aturan() -> None:
 
             Skor bobot aturan = Σ (bobot × tingkat manfaat),
             
-            rentang 0-200, dengan bobot
+            Rentang 0-200, dengan bobot
             IPK = {BOBOT['ipk']}, Penghasilan = {BOBOT['penghasilan']}, Prestasi = {BOBOT['prestasi']},
             Tanggungan = {BOBOT['tanggungan']} (total 100).
 
