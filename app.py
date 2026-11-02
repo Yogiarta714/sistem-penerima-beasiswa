@@ -395,9 +395,7 @@ def halaman_aturan() -> None:
             - Penghasilan orang tua: **Tinggi = 0**, Sedang = 1, **Rendah = 2** (penghasilan rendah → prioritas naik).
             - Tanggungan: Sedikit = 0, Sedang = 1, **Banyak = 2** (tanggungan banyak → prioritas naik).
 
-            Skor bobot aturan = Σ (bobot × tingkat manfaat),
-            
-            Rentang 0-200, dengan bobot
+            Skor bobot aturan = Σ (bobot × tingkat manfaat), rentang 0-200, dengan bobot
             IPK = {BOBOT['ipk']}, Penghasilan = {BOBOT['penghasilan']}, Prestasi = {BOBOT['prestasi']},
             Tanggungan = {BOBOT['tanggungan']} (total 100).
 
@@ -645,15 +643,16 @@ def halaman_pengujian() -> None:
     with k[2]:
         kartu("Gagal", str(len(tabel) - lulus), "#B5483C" if len(tabel) - lulus else None)
 
-    st.markdown(
-        "**Kriteria LULUS:**"
-        "- inferensi berhasil tanpa error"
-        "- semua μ ∈ [0,1]"
-        "- tiap variabel punya μ > 0"
-        "- ≥ 1 aturan aktif"
-        "- skor ∈ [0,100]"
-        "- kategori sesuai harapan" 
-        "- μ sesuai nilai teoretis (bila ditentukan)"
+    st.markdown(f"""
+        **Kriteria LULUS:**
+        - inferensi berhasil tanpa error
+        - semua μ ∈ [0,1]
+        - tiap variabel punya μ > 0
+        - ≥ 1 aturan aktif
+        - skor ∈ [0,100]
+        - kategori sesuai harapan
+        - μ sesuai nilai teoretis (bila ditentukan)
+        """
     )
     kelompok = st.multiselect("Filter kelompok", sorted(tabel["Kelompok"].unique()),
                             default=sorted(tabel["Kelompok"].unique()))
