@@ -395,12 +395,17 @@ def halaman_aturan() -> None:
             - Penghasilan orang tua: **Tinggi = 0**, Sedang = 1, **Rendah = 2** (penghasilan rendah → prioritas naik).
             - Tanggungan: Sedikit = 0, Sedang = 1, **Banyak = 2** (tanggungan banyak → prioritas naik).
 
-            Skor bobot aturan = Σ (bobot × tingkat manfaat), rentang 0-200, dengan bobot
+            Skor bobot aturan = Σ (bobot × tingkat manfaat),
+            
+            rentang 0-200, dengan bobot
             IPK = {BOBOT['ipk']}, Penghasilan = {BOBOT['penghasilan']}, Prestasi = {BOBOT['prestasi']},
             Tanggungan = {BOBOT['tanggungan']} (total 100).
 
-            Ambang konsekuen: skor < {AMBANG_KONSEKUEN[0][0]} → Tidak Layak; < {AMBANG_KONSEKUEN[1][0]} → Cukup Layak;
-            < {AMBANG_KONSEKUEN[2][0]} → Layak; selebihnya → Sangat Layak.
+            Ambang konsekuen:
+            - skor < {AMBANG_KONSEKUEN[0][0]} → Tidak Layak
+            - skor < {AMBANG_KONSEKUEN[1][0]} → Cukup Layak
+            - skor < {AMBANG_KONSEKUEN[2][0]} → Layak
+            - selebihnya → Sangat Layak.
 
             **Veto akademik:** aturan dengan IPK Rendah dibatasi maksimum *{BATAS_KONSEKUEN_IPK_RENDAH}*.
 
