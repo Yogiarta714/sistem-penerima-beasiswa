@@ -1,0 +1,1 @@
+"""Paket inti SPK Kelayakan Beasiswa (Fuzzy Mamdani)."""
