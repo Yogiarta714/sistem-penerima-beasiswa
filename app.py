@@ -931,9 +931,9 @@ def halaman_analisis() -> None:
 # Navigasi
 HALAMAN = {
     "Dashboard": halaman_dashboard,
-    "Simulasi Individu": halaman_simulasi,
     "Fungsi Keanggotaan": halaman_mf,
     "Basis Aturan": halaman_aturan,
+    "Simulasi Individu": halaman_simulasi,
     "Detail Proses Perhitungan": halaman_detail,
     "Dataset Mahasiswa": halaman_dataset,
     "Pengujian Sistem": halaman_pengujian,
