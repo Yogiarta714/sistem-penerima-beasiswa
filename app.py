@@ -646,8 +646,14 @@ def halaman_pengujian() -> None:
         kartu("Gagal", str(len(tabel) - lulus), "#B5483C" if len(tabel) - lulus else None)
 
     st.markdown(
-        "**Kriteria LULUS:** inferensi berhasil tanpa error · semua μ ∈ [0,1] · tiap variabel punya μ > 0 · "
-        "≥ 1 aturan aktif · skor ∈ [0,100] · kategori sesuai harapan · μ sesuai nilai teoretis (bila ditentukan)."
+        "**Kriteria LULUS:**"
+        "- inferensi berhasil tanpa error"
+        "- semua μ ∈ [0,1]"
+        "- tiap variabel punya μ > 0"
+        "- ≥ 1 aturan aktif"
+        "- skor ∈ [0,100]"
+        "- kategori sesuai harapan" 
+        "- μ sesuai nilai teoretis (bila ditentukan)"
     )
     kelompok = st.multiselect("Filter kelompok", sorted(tabel["Kelompok"].unique()),
                             default=sorted(tabel["Kelompok"].unique()))
